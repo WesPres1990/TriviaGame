@@ -21,11 +21,12 @@ timeInSecs--;
 else {
 clearInterval(ticker);
 stop();
-showResults(); // stop counting at zero
+showResults(); // stop counting at zero and show results
 // startTimer(30);  // remove forward slashes in front of startTimer to repeat if required
 }
 
-document.getElementById("countdown").innerHTML = secs;
+//*document.getElementById("countdown").innerHTML = "Time Remaining: " + secs;*//
+$('#countdown').html('<h2>' + "Time Remaining: " + secs +'</h2>');
 }
 
 startTimer(30);  // 30 seconds
@@ -84,13 +85,12 @@ function buildQuiz() {
           // add to the number of correct answers
           numCorrect++;
   
-          // color the answers green
-          answerContainers[questionNumber].style.color = "lightgreen";
+          // if answer is wrong
         } else if (guessedAnswer === currentQuestion.wrongAnswers) {
+            //add to the number of incorrect answers
             numIncorrect++;
-          // if answer is wrong or blank
-          // color the answers red
-          answerContainers[questionNumber].style.color = "red";
+            
+          // if unaswered
         } else {
             numUnanswered++;
         }
@@ -107,46 +107,46 @@ function buildQuiz() {
       {
         question: "What was the name of Titanic's older sister ship?",
         answers: {
-          a: "Olympic",
-          b: "Britannic",
-          c: "Majestic",
-          d: "Lusitania"
+          A: "Olympic",
+          B: "Britannic",
+          C: "Majestic",
+          D: "Lusitania"
         },
-        correctAnswer: "a",
-        wrongAnswers: ["b", "c", "d"]
+        correctAnswer: "A",
+        wrongAnswers: ["B", "C", "D"]
       },
       {
         question: "Who founded New York in 1609?",
         answers: {
-          a: "Giovanni da Verrazzano",
-          b: "Peter Stuyvesant",
-          c: "Henry Hudson",
-          d: "Walter Raleigh"
+          A: "Giovanni da Verrazzano",
+          B: "Peter Stuyvesant",
+          C: "Henry Hudson",
+          D: "Walter Raleigh"
         },
-        correctAnswer: "c",
-        wrongAnswers: ["a", "b", "d"]
+        correctAnswer: "C",
+        wrongAnswers: ["A", "B", "D"]
       },
       {
         question: "Which one of these presidents is not typically ranked in the top three?",
         answers: {
-          a: "Franklin D. Roosevelt",
-          b: "Lyndon B. Johnson",
-          c: "George Washington",
-          d: "Abraham Lincoln"
+          A: "Franklin D. Roosevelt",
+          B: "Lyndon B. Johnson",
+          C: "George Washington",
+          D: "Abraham Lincoln"
         },
-        correctAnswer: "b",
-        wrongAnswers: ["a", "c", "d"]
+        correctAnswer: "B",
+        wrongAnswers: ["A", "C", "D"]
       },
       {
         question: "How does Harry Potter hide from his enemies?",
         answers: {
-          a: "Invisibility Charm",
-          b: "Shriking Potion",
-          c: "Invisibility Cloak",
-          d: "Camoflauge"
+          A: "Invisibility Charm",
+          B: "Shriking Potion",
+          C: "Invisibility Cloak",
+          D: "Camoflauge"
         },
-        correctAnswer: "c",
-        wrongAnswers: ["a", "b", "c"]
+        correctAnswer: "C",
+        wrongAnswers: ["A", "B", "D"]
       }
     ];
   
