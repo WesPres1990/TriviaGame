@@ -86,7 +86,11 @@ function buildQuiz() {
           numCorrect++;
   
           // if answer is wrong
-        } else if (guessedAnswer === currentQuestion.wrongAnswers) {
+        } else if (guessedAnswer === currentQuestion.wrongAnswer) {
+            numIncorrect++;
+        } else if (guessedAnswer === currentQuestion.incorrectAnswer) {
+            numIncorrect++;
+        } else if (guessedAnswer === currentQuestion.falseAnswer) {
             //add to the number of incorrect answers
             numIncorrect++;
 
@@ -110,12 +114,12 @@ function buildQuiz() {
           A: "Olympic",
           B: "Britannic",
           C: "Majestic",
-          D: "Lusitania"
+          D: "Lusitania",
         },
         correctAnswer: "A",
-        wrongAnswers: "B", 
-        wrongAnswers: "C", 
-        wrongAnswers: "D"
+        wrongAnswer: "B", 
+        incorrectAnswer: "C", 
+        falseAnswer: "D",
       },
       {
         question: "Who founded New York in 1609?",
@@ -123,13 +127,12 @@ function buildQuiz() {
           A: "Giovanni da Verrazzano",
           B: "Peter Stuyvesant",
           C: "Henry Hudson",
-          D: "Walter Raleigh"
+          D: "Walter Raleigh",
         },
         correctAnswer: "C",
-        wrongAnswers: "A", 
-        wrongAnswers: "B", 
-        wrongAnswers: "D"
-
+        wrongAnswer: "A",
+        incorrectAnswer: "B",
+        falseAnswer: "D",
       },
       {
         question: "Which one of these presidents is not typically ranked in the top three?",
@@ -137,25 +140,25 @@ function buildQuiz() {
           A: "Franklin D. Roosevelt",
           B: "Lyndon B. Johnson",
           C: "George Washington",
-          D: "Abraham Lincoln"
+          D: "Abraham Lincoln",
         },
         correctAnswer: "B",
-        wrongAnswers: "A", 
-        wrongAnswers: "C", 
-        wrongAnswers: "D"
+        wrongAnswer: "A", 
+        incorrectAnswer: "C", 
+        falseAnswer: "D",
       },
       {
         question: "How does Harry Potter hide from his enemies?",
         answers: {
           A: "Invisibility Charm",
           B: "Shriking Potion",
-          C: "Invisibility Cloak",
-          D: "Camoflauge"
+          C: "Camoflauge",
+          D: "Invisibility Cloak",
         },
-        correctAnswer: "C",
-        wrongAnswers: "A", 
-        wrongAnswers: "B", 
-        wrongAnswers: "D"
+        correctAnswer: "D",
+        wrongAnswer: "A", 
+        incorrectAnswer: "B", 
+        falseAnswer: "C",
       }
     ];
   

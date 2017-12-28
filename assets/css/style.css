@@ -5,6 +5,16 @@ body, html{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*.jumbotron-1{
+    background-color: lightgreen;
+    font-family: "Times New Roman", "serif";
+    font-weight: bold;
+    width:800px;
+    margin: 0 auto;
+    text-align: center;
+}*/
+
 .jumbotron{
     background-color: lightgreen;
     font-family: "Times New Roman", "serif";
