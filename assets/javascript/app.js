@@ -89,7 +89,7 @@ function buildQuiz() {
         } else if (guessedAnswer === currentQuestion.wrongAnswers) {
             //add to the number of incorrect answers
             numIncorrect++;
-            
+
           // if unaswered
         } else {
             numUnanswered++;
@@ -113,7 +113,9 @@ function buildQuiz() {
           D: "Lusitania"
         },
         correctAnswer: "A",
-        wrongAnswers: ["B", "C", "D"]
+        wrongAnswers: "B", 
+        wrongAnswers: "C", 
+        wrongAnswers: "D"
       },
       {
         question: "Who founded New York in 1609?",
@@ -124,7 +126,10 @@ function buildQuiz() {
           D: "Walter Raleigh"
         },
         correctAnswer: "C",
-        wrongAnswers: ["A", "B", "D"]
+        wrongAnswers: "A", 
+        wrongAnswers: "B", 
+        wrongAnswers: "D"
+
       },
       {
         question: "Which one of these presidents is not typically ranked in the top three?",
@@ -135,7 +140,9 @@ function buildQuiz() {
           D: "Abraham Lincoln"
         },
         correctAnswer: "B",
-        wrongAnswers: ["A", "C", "D"]
+        wrongAnswers: "A", 
+        wrongAnswers: "C", 
+        wrongAnswers: "D"
       },
       {
         question: "How does Harry Potter hide from his enemies?",
@@ -146,7 +153,9 @@ function buildQuiz() {
           D: "Camoflauge"
         },
         correctAnswer: "C",
-        wrongAnswers: ["A", "B", "D"]
+        wrongAnswers: "A", 
+        wrongAnswers: "B", 
+        wrongAnswers: "D"
       }
     ];
   
