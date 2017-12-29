@@ -44,8 +44,7 @@ function buildQuiz() {
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
-              ${letter} :
-              ${currentQuestion.answers[letter]}
+              ${letter} : ${currentQuestion.answers[letter]} 
             </label>`
           );
         }
@@ -53,12 +52,12 @@ function buildQuiz() {
         // Add this question and its answers to the output
         output.push(
           `<div class="question"><h3> ${currentQuestion.question} </h3></div>
-          <div class="answers"> ${answers.join("")} </div>`
+          <div class="answers"><h4> ${answers.join("")} </h4></div>`
         );
       });
   
       // Combine output list into one string of HTML and put it on the page
-      quizContainer.innerHTML = output.join("<h2></h2>");
+      quizContainer.innerHTML = output.join("<h1></h1>");
     }
   
     function showResults() {
@@ -108,7 +107,7 @@ function buildQuiz() {
     var submitButton = document.getElementById("submit");
     var myQuestions = [
       {
-        question: "What was the name of Titanic's older sister ship?",
+        question: "What was the name of the Titanic's older sister ship?",
         answers: {
           A: "Olympic",
           B: "Britannic",
@@ -121,7 +120,7 @@ function buildQuiz() {
         falseAnswer: "D",
       },
       {
-        question: "Who founded New York in 1609?",
+        question: "Who explored present-day New York in 1609?",
         answers: {
           A: "Giovanni da Verrazzano",
           B: "Peter Stuyvesant",
@@ -134,7 +133,7 @@ function buildQuiz() {
         falseAnswer: "D",
       },
       {
-        question: "Which one of these presidents is not typically ranked in the top three?",
+        question: "Which of the following persons is not typically ranked among the top three presidents?",
         answers: {
           A: "Franklin D. Roosevelt",
           B: "Lyndon B. Johnson",
@@ -147,17 +146,95 @@ function buildQuiz() {
         falseAnswer: "D",
       },
       {
-        question: "How does Harry Potter hide from his enemies?",
+        question: "Harry Potter uses which of the following to hide from his enemies?",
         answers: {
           A: "Invisibility Charm",
           B: "Shriking Potion",
-          C: "Camoflauge",
+          C: "Camouflage",
           D: "Invisibility Cloak",
         },
         correctAnswer: "D",
         wrongAnswer: "A", 
         incorrectAnswer: "B", 
         falseAnswer: "C",
+      },
+      {
+        question: "How many teams are there in the NFL?",
+        answers: {
+          A: "24",
+          B: "16",
+          C: "32",
+          D: "48",
+        },
+        correctAnswer: "C",
+        wrongAnswer: "A", 
+        incorrectAnswer: "B", 
+        falseAnswer: "D",
+      },
+      {
+        question: "2017 marks the centennial of the United States's entry into which war?",
+        answers: {
+          A: "World War I",
+          B: "Franco-Prussian War",
+          C: "World War II",
+          D: "Korean War",
+        },
+        correctAnswer: "A",
+        wrongAnswer: "C", 
+        incorrectAnswer: "B", 
+        falseAnswer: "D",
+      },
+      {
+        question: "Which of these TV shows had an original run on both Nickelodeon and the Disney Channel?",
+        answers: {
+          A: "Legends of the Hidden Temple",
+          B: "Doug",
+          C: "Rugrats",
+          D: "Recess",
+        },
+        correctAnswer: "B",
+        wrongAnswer: "A", 
+        incorrectAnswer: "C", 
+        falseAnswer: "D",
+      },
+      {
+        question: "The rail tunnel linking the United Kingdom and France is known as the _________.",
+        answers: {
+          A: "English Channel Tunnel",
+          B: "Chunnel",
+          C: "Channel Tunnel",
+          D: "B and C",
+        },
+        correctAnswer: "D",
+        wrongAnswer: "A", 
+        incorrectAnswer: "C", 
+        falseAnswer: "B",
+      },
+      {
+        question: "The State of Georgia is named for _________.",
+        answers: {
+          A: "Saint George",
+          B: "George Washingon",
+          C: "King George II of Great Britain and Ireland",
+          D: "King George III of Great Britain and Ireland",
+        },
+        correctAnswer: "C",
+        wrongAnswer: "A", 
+        incorrectAnswer: "D", 
+        falseAnswer: "B",
+      },
+      {
+        question: "What was the birthplace of Jesus Christ?",
+        answers: {
+          A: "Bethlehem",
+          B: "Nazareth",
+          C: "Jerusalem",
+          D: "Jericho",
+        },
+        correctAnswer: "A",
+        wrongAnswer: "C", 
+        incorrectAnswer: "D", 
+        falseAnswer: "B",
       }
     ];
 
@@ -167,7 +244,7 @@ function buildQuiz() {
     $(".jumbotron-1").on("click", function (){
         // When the "Start" button is clicked, the div with the questions that was hidden is shown and the timer begins to run
                 $('.jumbotron-2').show();
-                startTimer(30);
+                startTimer(45);
                 $(this).hide();
     });
 

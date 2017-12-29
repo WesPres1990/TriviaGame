@@ -4,7 +4,6 @@ body, html{
     height: 100%;
     width: 100%;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -12,7 +11,7 @@ body, html{
     background-color: lightgreen;
     font-family: "Times New Roman", "serif";
     font-weight: bold;
-    width:800px;
+    width:850px;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -23,7 +22,7 @@ body, html{
     background-color: lightgreen;
     font-family: "Times New Roman", "serif";
     font-weight: bold;
-    width:800px;
+    width:850px;
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -33,14 +32,32 @@ body, html{
 
 .jumbotron-3{
     background-color: lightgreen;
-    font-family: "Times New Roman", "serif";
+    font-family: "Times New Roman", "Times", "serif";
     font-weight: bold;
-    width:800px;
+    width:850px;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     display: none;
+}
+
+h1{
+    font-family: "Georgia", "Times New Roman", "Times", "serif";
+    color: rgb(8, 184, 8);
+    font-size: 75px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: red;
+}
+
+.btn{
+    font-family: "Georgia", "Times New Roman", "Times", "serif";
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 #results{
