@@ -6,22 +6,43 @@ body, html{
     background-size: cover;
 }
 
-/*.jumbotron-1{
+.jumbotron-1{
     background-color: lightgreen;
     font-family: "Times New Roman", "serif";
     font-weight: bold;
     width:800px;
     margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
-}*/
+}
 
-.jumbotron{
+.jumbotron-2{
     background-color: lightgreen;
     font-family: "Times New Roman", "serif";
     font-weight: bold;
     width:800px;
     margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
+    display: none;
+}
+
+.jumbotron-3{
+    background-color: lightgreen;
+    font-family: "Times New Roman", "serif";
+    font-weight: bold;
+    width:800px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    display: none;
+}
+
+#results{
+    font-size: 20px;
 }
 
 #quiz{
