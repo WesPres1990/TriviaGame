@@ -17,8 +17,7 @@ function tick() {
 var secs = timeInSecs;
 if (secs>0) {
 timeInSecs--;
-}
-else {
+} else {
 clearInterval(ticker);
 stop();
 showResults(); // stop counting at zero and show results
@@ -29,7 +28,7 @@ showResults(); // stop counting at zero and show results
 $('#countdown').html('<h2>' + "Time Remaining: " + secs +'</h2>');
 }
 
-startTimer(30);  // 30 seconds
+//startTimer(30);  // 30 seconds
 
 
 function buildQuiz() {
@@ -55,13 +54,13 @@ function buildQuiz() {
   
         // add this question and its answers to the output
         output.push(
-          `<div class="question"> ${currentQuestion.question} </div>
+          `<div class="question"><h3> ${currentQuestion.question} </h3></div>
           <div class="answers"> ${answers.join("")} </div>`
         );
       });
   
       // finally combine our output list into one string of HTML and put it on the page
-      quizContainer.innerHTML = output.join("");
+      quizContainer.innerHTML = output.join("<h2></h2>");
     }
   
     function showResults() {
@@ -107,6 +106,7 @@ function buildQuiz() {
     var quizContainer = document.getElementById("quiz");
     var resultsContainer = document.getElementById("results");
     var submitButton = document.getElementById("submit");
+    var startButton = document.getElementById("startgame");
     var myQuestions = [
       {
         question: "What was the name of Titanic's older sister ship?",
@@ -161,12 +161,45 @@ function buildQuiz() {
         falseAnswer: "C",
       }
     ];
+
+    // This initializes the button that starts the game 
+    $(".jumbotron-1").on("click", function (){
+        // when the start button clicked, the div with the questions that was hidden is shown
+                $('.jumbotron-2').show();
+                startTimer(30);
+                console.log('hello');
+        
+                $(this).hide();
+    });
+
+    // This initializes the button that starts the game 
+    $("#submit").on("click", function (){
+        // when the start button clicked, the div with the questions that was hidden is shown
+                $('.jumbotron-3').show();
+                console.log('hello');
+            
+                $('.jumbotron-2').hide();
+    });
+
+    //$(".jumbotron-3").on("click", function (){
+    // when the start button clicked, the div with the questions that was hidden is shown
+            //$('.jumbotron-1').show();
+            //console.log('hello');
+            
+            //$(this).hide();
+    //});
   
     // display quiz right away
     buildQuiz();
   
     // on submit, show results
     submitButton.addEventListener("click", showResults);
+
+    //countdownContainer.addEventListener("click", showResults);
+
+    //submitButton.addEventListener("click", clearInterval);
+
+    //startButton.addEventListener("click", tick);
 ;
 
 //*var guessedAnswer = 0*//
