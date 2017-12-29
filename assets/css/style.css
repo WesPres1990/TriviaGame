@@ -11,7 +11,8 @@ body, html{
     background-color: lightgreen;
     font-family: "Times New Roman", "serif";
     font-weight: bold;
-    width:850px;
+    width:900px;
+    max-width: 100%;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -22,7 +23,8 @@ body, html{
     background-color: lightgreen;
     font-family: "Times New Roman", "serif";
     font-weight: bold;
-    width:850px;
+    width:900px;
+    max-width: 100%;
     margin: 0 auto;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -34,7 +36,8 @@ body, html{
     background-color: lightgreen;
     font-family: "Times New Roman", "Times", "serif";
     font-weight: bold;
-    width:850px;
+    width:900px;
+    max-width: 100%;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
