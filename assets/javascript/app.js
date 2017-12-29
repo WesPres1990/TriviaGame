@@ -19,7 +19,7 @@ $('.jumbotron-3').show();
 $('.jumbotron-2').hide();
 showResults();
 // Removing forward slashes in front of startTimer supposed repeat if required, but does not work
-// startTimer(30);
+// startTimer(45);
 }
 
 // Displaying timer
@@ -159,7 +159,7 @@ function buildQuiz() {
         falseAnswer: "C",
       },
       {
-        question: "How many teams are there in the NFL?",
+        question: "How many teams are there in the National Football League?",
         answers: {
           A: "24",
           B: "16",
@@ -189,7 +189,7 @@ function buildQuiz() {
         answers: {
           A: "Legends of the Hidden Temple",
           B: "Doug",
-          C: "Rugrats",
+          C: "Justice League",
           D: "Recess",
         },
         correctAnswer: "B",
