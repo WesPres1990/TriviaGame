@@ -17,9 +17,19 @@ timeInSecs--;
 clearInterval(ticker);
 $('.jumbotron-3').show();
 $('.jumbotron-2').hide();
+(secs=45);
 showResults();
+buildQuiz();
 // Removing forward slashes in front of startTimer supposed repeat if required, but does not work
 // startTimer(45);
+}
+if (secs>0 && submitButton.addEventListener("click", showResults)){
+    clearInterval(ticker);
+    $('.jumbotron-3').show();
+    $('.jumbotron-2').hide();
+    (secs=45);
+    showResults();
+    buildQuiz();
 }
 
 // Displaying timer
@@ -256,11 +266,11 @@ function buildQuiz() {
     });
     
     // This was for allowing the user to restart the game, but I could not get it to work properly
-    //$(".jumbotron-3").on("click", function (){
+    $(".jumbotron-3").on("click", function (){
     // when the "Restart" button is clicked, the div with the opening jumbotron that was hidden is shown
-            //$('.jumbotron-1').show(); 
-            //$(this).hide();
-    //});
+            $('.jumbotron-1').show(); 
+            $(this).hide();
+    });
   
     // Display quiz right away
     buildQuiz();
