@@ -16,7 +16,9 @@ The game restarts when the player refreshes the page, and he or she has the main
 
 ### Technologies Used
 
-Languages - HTML5, CSS4, Bootstrap, JavaScript, jQuery
+Languages - HTML5, CSS4, JavaScript
+
+Libraries - Bootstrap, jQuery
 
 Text Editor - Visual Studio Code
 
